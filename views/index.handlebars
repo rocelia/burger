@@ -1,0 +1,69 @@
+<div id="container">
+
+    <div>
+        {{#each burgers}} {{#if devoured}} {{else}}
+        <p>
+            <span class="new-burgers">{{burger_name}}</span>
+            <button class="devour" info={{id}}>Devour It!</button>
+        </p>
+        {{/if}} {{/each}}
+    </div>
+
+    <div>
+        {{#each burgers}} {{#if devoured}}
+        <p class="eaten-burgers">
+            <button class="delete" info={{id}}>X</button>
+            {{burger_name}}
+        </p>
+        {{/if}} {{/each}}
+    </div>
+</div>
+
+<textarea class="add-burger"></textarea>
+<br>
+<button class="submit" info={{burger_name}}>Submit</button>
+<p>Enter a burger you want to eat and click Submit</p>
+
+<script>
+
+    $('.devour').click(function () {
+        var id = $(this).attr('info');
+
+        $.ajax({
+            method: 'PUT',
+            url: '/eat/' + id
+        }).then(function (res) {
+            console.log(res);
+            location.reload();
+        });
+
+    });
+
+    $('.submit').click(function () {
+        var name = $(".add-burger").val();
+        console.log(name);
+
+        $.ajax({
+            method: 'POST',
+            url: '/add/' + name
+        }).then(function (res) {
+            console.log(res);
+            location.reload();
+        });
+
+    });
+
+    $('.delete').click(function () {
+        var id = $(this).attr('info');
+
+        $.ajax({
+            method: 'DELETE',
+            url: '/delete/' + id
+        }).then(function (res) {
+            console.log(res);
+            location.reload();
+        });
+
+    });
+
+</script>

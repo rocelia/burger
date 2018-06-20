@@ -1,0 +1,72 @@
+body {
+
+  background: lightblue;
+  text-align: center;
+}
+
+.burger-img {
+  width: 120px;
+}
+
+.title {
+  color: red;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 60px;
+}
+
+.new-burgers {
+  border: 1px solid #333;
+  background-color: #fff;
+  padding: 21px;
+  border-radius: 6px;
+  width: 60%;
+  margin-left: 12%;
+  float: left;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif'
+
+}
+
+.devour {
+  display: inline;
+  margin-top: 33px;
+}
+
+.eaten-burgers {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 6px;
+  border-radius: 6px;
+  width: 75%;
+  margin-left: 12%;
+  margin-right: 12%;
+  color: #ddd;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif'
+
+}
+
+.add-burger {
+  width: 240px;
+  height: 45px;
+  text-align: center;
+  font-size: 15px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif'
+
+}
+
+.submit {
+  background-color: black;
+  color: white;
+  padding: 9px 45px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif'
+}
