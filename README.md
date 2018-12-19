@@ -1,3 +1,7 @@
+EAT DA BURGER
+
+A full stack application allowing users to list items with a front end implemented with HTML/CSS and the backend implemented with Node.js and Express MySQL, Node, Express, Handlebars and a homemade ORM. Used an MVC design pattern. Utilized Node and MySQL to query and route data.
+
 Installation
 To run the application locally, first clone this repository with the following command.
 
@@ -21,4 +25,5 @@ Require the following npm packages inside of the server.js file:
 
 express
 body-parser
-Finally, run the node server.js locally.
+
+Navigate to localhost:8080
